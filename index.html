@@ -55,7 +55,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-
 .hero-perks li{font-size:.88rem;color:var(--muted);display:flex;align-items:center;gap:.6rem}
 @media(max-width:660px){.hero-perks li{justify-content:center}}
 .hero-perks li::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--rose);flex-shrink:0}
-.hero-img-col{background:#f5c200;display:flex;align-items:stretch;justify-content:center;position:relative;min-height:340px;overflow:hidden}
+.hero-img-col{background:var(--blush);display:flex;align-items:stretch;justify-content:center;position:relative;min-height:340px;overflow:hidden}
 @media(max-width:660px){.hero-img-col{min-height:220px}}
 .hero-ph{display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--blush-b)}
 .hero-ph .icon{font-size:3.5rem}
@@ -116,20 +116,18 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-
 .freebie-pts li::before{content:'✦';color:#f9a8d4;flex-shrink:0}
 .freebie-note{font-size:.7rem;color:rgba(255,255,255,.3);margin-top:.8rem}
 .book-wrap{display:flex;flex-direction:column;align-items:center;gap:.9rem}
-.book{width:110px;height:152px;background:linear-gradient(145deg,var(--rose),#e8856e);border-radius:10px;box-shadow:10px 10px 28px rgba(0,0,0,.45);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1rem;text-align:center;gap:.4rem}
-.book .b-icon{font-size:1.7rem}
-.book .b-title{font-size:.58rem;font-weight:800;color:#fff;line-height:1.25}
-.book .b-by{font-size:.5rem;color:rgba(255,255,255,.65);margin-top:.15rem}
-.book-wrap p{font-size:.72rem;color:rgba(255,255,255,.35);text-align:center;max-width:150px}
+.book-wrap p{font-size:.72rem;color:rgba(255,255,255,.35);text-align:center;max-width:160px}
 
 /* TESTI */
 .testi{background:var(--cream)}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.2rem}
 @media(max-width:660px){.testi-grid{grid-template-columns:1fr}}
 .testi-card{background:#fff;border-radius:20px;padding:2rem 1.6rem;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.t-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;margin-bottom:.9rem;border:2px solid var(--blush-b);display:block}
 .t-stars{color:#f59e0b;font-size:.8rem;margin-bottom:.7rem}
 .t-text{font-size:.83rem;color:var(--muted);font-style:italic;line-height:1.75;margin-bottom:.9rem}
 .t-name{font-size:.75rem;font-weight:700;color:var(--text)}
+.t-handle{font-size:.7rem;color:var(--muted);font-weight:400}
 
 /* PRICING */
 .pricing{background:#fff;text-align:center}
@@ -208,7 +206,7 @@ footer a{color:var(--blush-b)}
       <p style="font-size:.72rem;color:var(--muted);margin-top:.5rem">One-time payment · Includes free Overeating Recovery Guide · 10 spots only</p>
     </div>
     <div class="hero-img-col">
-      <img src="https://i.imgur.com/placeholder.jpg" id="heroImg" alt="Mabel, founder of Maibel, holding healthy meal bowls" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"/>
+      <img src="./images/hero-food.jpg" id="heroImg" alt="Colourful healthy meal bowls — a gentle nutrition reset" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block"/>
       <div class="evren-bubble">
         <strong>Evren 🤍 just now</strong>
         "No guilt today, okay? Let's just take one small step together. 💜"
@@ -299,11 +297,7 @@ footer a{color:var(--blush-b)}
       <div class="freebie-note">Only available to founding cohort members.</div>
     </div>
     <div class="book-wrap">
-      <div class="book">
-        <div class="b-icon">🌿</div>
-        <div class="b-title">Recovering From Overeating</div>
-        <div class="b-by">by Mabel · Maibel</div>
-      </div>
+      <img src="./images/freebie-guide.jpg" alt="Fad-Free Dieting — Guide to Mabel's Method book cover" style="width:160px;border-radius:10px;box-shadow:10px 10px 28px rgba(0,0,0,.45);display:block"/>
       <p>Free with your founding cohort sign-up</p>
     </div>
   </div>
@@ -316,19 +310,22 @@ footer a{color:var(--blush-b)}
     <h2>Women who've already met Evren</h2>
     <div class="testi-grid">
       <div class="testi-card">
+        <img class="t-avatar" src="https://api.dicebear.com/9.x/adventurer/svg?seed=RachelLim&backgroundColor=fce8e3&radius=50" alt="Rachel Lim"/>
         <div class="t-stars">★★★★★</div>
         <p class="t-text">"I've never felt so… not judged. Even when I told Evren I ate pineapple tarts at midnight. He just said, 'that's okay, let's keep going.'"</p>
-        <div class="t-name">Beta tester · Singapore 🇸🇬</div>
+        <div class="t-name">Rachel Lim <span class="t-handle">· Singapore 🇸🇬</span></div>
       </div>
       <div class="testi-card">
+        <img class="t-avatar" src="https://api.dicebear.com/9.x/adventurer/svg?seed=NurAisyah&backgroundColor=e8f5e8&radius=50" alt="Nur Aisyah"/>
         <div class="t-stars">★★★★★</div>
         <p class="t-text">"The daily check-ins made me feel like someone cared whether I showed up. That's what kept me going — not willpower."</p>
-        <div class="t-name">Beta tester · Malaysia 🇲🇾</div>
+        <div class="t-name">Nur Aisyah <span class="t-handle">· Malaysia 🇲🇾</span></div>
       </div>
       <div class="testi-card">
+        <img class="t-avatar" src="https://api.dicebear.com/9.x/adventurer/svg?seed=HuiLingChen&backgroundColor=fce8e3&radius=50" alt="慧玲 Chen"/>
         <div class="t-stars">★★★★★</div>
         <p class="t-text">"Week 2, I realised I hadn't felt guilty about food once. Evren never made me feel bad — he just helped me keep going."</p>
-        <div class="t-name">Beta tester · Singapore 🇸🇬</div>
+        <div class="t-name">慧玲 Chen <span class="t-handle">· Singapore 🇸🇬</span></div>
       </div>
     </div>
   </div>
